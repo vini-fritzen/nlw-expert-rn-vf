@@ -7,11 +7,15 @@ import { Header } from '@/components/header';
 
 import { CATEGORIES, MENU } from '@/utils/data/products';
 import { Product } from '@/components/product';
+import { useCartStore } from '@/stores/cart-store';
 
 export default function Home() {
+    const cartStore = useCartStore();
     const [category, setCategory] = useState(CATEGORIES[0]);
 
     const sectionListRef = useRef<SectionList>(null)
+
+    const cartQuantityItens = cartStore.products.reduce((total, Product) => total + Product.quantity, 0)
 
     function handleCategoryButton(selectedCategory: string){
         setCategory(selectedCategory)
@@ -28,7 +32,7 @@ export default function Home() {
     }
     return(
         <View className='flex-1 pt-8'>
-            <Header title="Faça seu pedido" cardQuantityItens={4}/>
+            <Header title="Faça seu pedido" cardQuantityItens={cartQuantityItens}/>
 
             <FlatList 
                 data={CATEGORIES}
