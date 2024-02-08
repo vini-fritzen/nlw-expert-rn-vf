@@ -26,6 +26,12 @@ NLW Expert é um evento focado em proporcionar uma imersão prática no desenvol
 - Criação da interface para exibir os detalhes do produto.
 - Implementação do gerenciamento de estado com Zustand para adicionar produtos ao carrinho.
 
+### Dia 3: Finalização da Aplicação
+- Persistência de dados do carrinho no dispositivo.
+- Desenvolvimento da opção de remover produtos do carrinho.
+- Implementação da funcionalidade de limpar o carrinho.
+- Adição da opção de enviar o pedido para o WhatsApp do estabelecimento.
+
 ## Como Executar o Projeto
 
 1. Clone este repositório.
